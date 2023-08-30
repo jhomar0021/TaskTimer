@@ -1,0 +1,311 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Task Timer</title>
+  <link rel="stylesheet" href="css/navbar.css">
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="css/videobg.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,600;0,900;1,400&family=Roboto:wght@500&display=swap"
+    rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+
+<body>
+  <!-- ------------------------------------------------------------------------------( NAVBAR )----------------------------- -->
+  <!-- ------------------------------------------------------------------------------( NAVBAR )----------------------------- -->
+  <!-- ------------------------------------------------------------------------------( NAVBAR )----------------------------- -->
+  <div id="heropage" style="height: 1px;"></div>
+  <div class="navbgh" style="position: fixed;top: 0px;width: 100%;">
+    <div class="navbg"></div>
+    <nav class="navbar navbar-expand-lg pe-0 me-0">
+      <div class="logo me-5 pe-5"><img id="profile-pic" src="assets/img/dev icon.png" alt="logo" class="logo-icon">
+      </div>
+      <button class="navbar-toggler me-3 me-md-5" style="background-color:blueviolet; color: cyan;" type="button"
+        data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mb-5 mb-lg-0">
+          <li><a class="navitem d-none" style="width:0px;">Home</a></li>
+          <li><a class="navitem " href="#heropage">Home</a></li>
+          <li><a class="navitem " href="#faq">Features</a></li>
+          <li><a class="navitem " href="">Contact Us</a></li>
+          <li><a class="navitem d-lg-none"><button type="button" class="list-button" data-bs-toggle="modal"
+                data-bs-target="#loginModal">Log In</button></a></li>
+          <li><a class="navitem d-lg-none"><button type="button" class="list-button" data-bs-toggle="modal"
+                data-bs-target="#registerModal">Sign Up</button></a></li>
+        </ul>
+        <div class="loginprompt d-none d-lg-block" style="margin-left: auto;">
+          <button type="button" class="me-4" data-bs-toggle="modal" data-bs-target="#loginModal">Log In</button>
+          <button type="button" class="me-4" data-bs-toggle="modal" data-bs-target="#registerModal">Sign Up</button>
+        </div>
+
+    </nav>
+  </div>
+
+  <!-- ------------------------------------------------------------------------------( BODY )----------------------------- -->
+  <!-- ------------------------------------------------------------------------------( BODY )----------------------------- -->
+  <!-- ------------------------------------------------------------------------------( BODY )----------------------------- -->
+  <div class="bg-animation" id="copy">
+    <canvas class="plane-canvas" id="plane-canvas"></canvas>
+    <canvas class="main-canvas" id="main-canvas"></canvas>
+    <div class="mouse" id="mouse"></div>
+  </div>
+
+
+  <!-- for deploy -->
+  <!-- <div class="video-wrapper" style="position: fixed;">
+    <video playsinline autoplay muted loop
+      poster="https://res.cloudinary.com/ddkq0s159/image/upload/v1690991183/data-info-alt_mcg9gm.jpg">
+      <source src="https://res.cloudinary.com/ddkq0s159/video/upload/v1690991014/data-animation_eb0ofm.mp4"
+        type="video/mp4" style="width: 100vw; object-fit: cover; position: absolute;">
+    </video>
+  </div> -->
+
+  <!-- for local -->
+  <div class="video-wrapper" style="position: fixed;">
+    <video playsinline autoplay muted loop>
+      <source src="https://mp-2-task-timer-ixtf.vercel.app/assets/img/data-animation.mp4"
+        type="video/mp4" style="width: 100vw; object-fit: cover; position: absolute;">
+    </video>
+  </div>
+
+  <div class="heropage" id="">
+
+
+    <div class="container-fluid mt-0 mt-2 mt-lg-5 pt-0 pt-5 ms-3 ms-lg-5">
+      <div class="row">
+        <div class="col-md-6 col-12">
+          <div class="mt-3 pt-5">
+            <h1 class="subs me-5 ms-3 ms-lg-5">with</h1>
+            <h1 class="title ms-3 ms-lg-5">TASKTIMER,</h1>
+          </div>
+          <div>
+            <h1 class="subs ms-3 ms-lg-5">you can</h1>
+          </div>
+
+        </div>
+        <div class="col-6 d-none d-md-block">
+          <div class="hero-img">
+            <img src="assets/img/homepanelpreview.jpg" alt="" class="hero-img1 ">
+            <img src="assets/img/metrics preview.jpg" alt="" class="hero-img2 ">
+          </div>
+        </div>
+        <div class="col-12 textgroup ms-0 me-3">
+          <div class="relative">
+            <div class="absolute ms-0 me-4">
+              <h1 class="title changing-text ms-0 ms-lg-5" id=""></h1>
+              <h1 class="blink"> _</h1>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 ms-0 mt-5 mt-lg-0 ms-lg-5">
+          <div class="call-to-action">
+            <a class="c2aA" type="button" class="list-button" data-bs-toggle="modal" data-bs-target="#registerModal"
+              style="width: 400%;"><button class="c2a1 text-center">Start Tasking</button></a>
+            <a class="c2aA" href="#faq" style="width: 400%;"><button class="c2a1 text-center">See Features</button></a>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- ----------------------------------------------------------------------------------------------------------------------
+  ----------------------------------------------------------------------------------------------------------------------
+  ---------------------------------------------------------------------------------------------------------------------- -->
+
+  <div class="cutter"></div>
+  <div class="features-page">
+    <div style="height:10svh;" id="faq"></div>
+    <div style="height: 100svh;">
+      <div class="container-fluid row h-75">
+        <div class="col-12 col-md feat-box">
+          <div class="features-list row justify-content-evenly ms-1 ms-md-0">
+            <div class="feature-img col-5 col-md-8 text-start text-md-end mt-4">
+              <img src="assets/img/feat-graph.png" alt="" class=" feat-icons feat-icons1" data-aos-delay="0"
+                data-aos="fade-right" data-aos-once="true" data-aos-offset="300" data-aos-easing="ease-in-sine">
+            </div>
+            <div class="col col-md-12 text-start text-md-center row mt-lg-2">
+              <h1>Real-Time Monitoring</h1>
+              <p>Stay ahead of the curve and work efficiently with real-time monitoring.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-md feat-box">
+          <div class="features-list row justify-content-evenly ms-1 ms-md-0">
+            <div class="feature-img col-5 col-md-8 text-start text-md-end mt-4">
+              <img src="assets/img/feat-stats.png" alt="" class="feat-icons feat-icons2 " data-aos-delay="200"
+                data-aos-once="true" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
+            </div>
+            <div class="col col-md-12 text-start text-md-center row mt-lg-2">
+              <h1>Recorded Sessions</h1>
+              <p>Automatically stores all of your activity to be easily reviewed and invoiced.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-md feat-box">
+          <div class="features-list row justify-content-evenly ms-1 ms-md-0">
+            <div class="feature-img col-5 col-md-8 text-start text-md-end mt-4">
+              <img src="assets/img/feat-accuracy.png" alt="" class="feat-icons feat-icons3 " data-aos-delay="400"
+                data-aos-once="true" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
+            </div>
+            <div class="col col-md-12 text-start text-md-center row mt-lg-2">
+              <h1>100% Time Accuracy</h1>
+              <p>Our system uses Web Worker API to optimize performance, even when the browser is idle.</p>
+            </div>
+          </div>
+        </div>
+
+
+
+      </div>
+    </div>
+
+  </div>
+  
+
+
+
+
+  <!-- ------------------------------------------------------------------------------( MODALS )----------------------------- -->
+  <!-- ------------------------------------------------------------------------------( MODALS )----------------------------- -->
+  <!-- ------------------------------------------------------------------------------( MODALS )----------------------------- -->
+  <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <strong>Log-in to your Task Timer Account</strong>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <form id="login-form">
+          <div class="modal-body">
+            <div class="container">
+              <div id="loginalert" class="text-center row">
+              </div>
+              <div>
+                <label for="InputEmail1" class="form-label">Username/Email Address</label>
+                <input type="text" class="form-control" id="email">
+              </div>
+              <div>
+                <label for="InputPassword" class="form-label">Password</label>
+                <input type="password" class="form-control" id="password">
+              </div>
+  
+              <div class="col-12 text-center register">
+                <a type="button" class="me-4" data-bs-toggle="modal" data-bs-target="#registerModal">New user? Sign-up
+                  here.</a>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="submit" class="btn btn-primary" id="sign-in">Sign-in</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="registerModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <strong>Sign-up for a Task Timer Account</strong>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <form id="reg-form">
+          <div class="modal-body">
+            <div id="registeralert" class="bg-danger-subtle text-center">
+            </div>
+            <div class="mb-4">
+              <div class="container">
+                <div class="row justify-content-evenly">
+  
+                  <div class="input-container col-5">
+                    <input id="personal" type="radio" name="account-level" value="1" checked>
+                    <div class="radio-tile">
+                      <i class="fa-solid fa-user" style="font-size: 5rem;"></i>
+                      <label for="personal">personal</label>
+                    </div>
+                  </div>
+  
+                  <div class="input-container col-5">
+                    <input id="corporate" type="radio" name="account-level" value="2">
+                    <div class="radio-tile">
+                      <i class="fa-solid fa-user-group" style="font-size: 5rem;"></i>
+                      <label for="corporate">corporate</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+  
+            </div>
+  
+            <div class="row">
+              <div class="mb-4 col-6">
+                <label for="exampleInputEmail1" class="form-label">First name</label>
+                <input type="text" required class="form-control" id="fname" aria-describedby="emailHelp">
+              </div>
+              <div class="mb-4 col-6">
+                <label for="exampleInputEmail1" class="form-label">Last Name</label>
+                <input type="text" required class="form-control" id="lname" aria-describedby="emailHelp">
+              </div>
+              <div class="mb-4 col-6">
+                <label for="exampleInputEmail1" class="form-label">Username</label>
+                <input type="email" required class="form-control" id="username" aria-describedby="emailHelp">
+              </div>
+              <div class="mb-4 col-6"></div>
+              <div class="mb-4 col-6">
+                <label for="exampleInputPassword1" class="form-label">Password</label>
+                <input type="password" required class="form-control" id="rpassword">
+              </div>
+              <div class="mb-4 col-6">
+                <label for="exampleInputEmail1" class="form-label">Confirm Password</label>
+                <input type="password" required class="form-control" id="rconfirmPassword" aria-describedby="emailHelp">
+              </div>
+            </div>
+  
+            <div class="text-center">
+              <a type="button" class="me-4" data-bs-toggle="modal" data-bs-target="#loginModal">Already have an account?
+                Log-in instead.</a>
+            </div>
+          </div>
+  
+          <div class="modal-footer">
+            <button type="submit" class="btn btn-primary" id="sign-in">Create Account</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"
+    integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS"
+    crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/77ec53770a.js" crossorigin="anonymous"></script>
+  <script src="js/jquery.min.js"></script>
+  <script src="user/login/script.js"></script>
+  <script src="js/routes.js"></script>
+  <script src="js/index.js"></script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,142 @@
+.home-menu-container {
+    border: solid blueviolet;
+    border-top: none;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    min-height: 85vh;
+    
+}
+
+.home-menu {
+    display: flex;
+    vertical-align: baseline;
+    justify-content: space-between;
+    margin: 0;
+    width: 100%;
+    position: sticky;
+    top:6vh;
+    background-color: white;
+    transition: 0.3s;
+}
+
+.hm-btn-on {
+    width: 55%;
+    height: 5vh;
+    border: blueviolet solid;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background-color: transparent;
+    border-bottom: none;
+    font-family: Roboto;
+    transition: 0.3s;
+    
+}
+.hm-btn-off {
+    width: 45%;
+    height: 5vh;
+    border: blueviolet solid;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background-image: url(https://mp-2-task-timer-ixtf.vercel.app/assets/img/bg-uneddited.png);
+    background-position: 0px 0px;
+    background-repeat: repeat-x;
+    animation: animatedBackground 20s linear infinite reverse;
+    color: white;
+    font-family: Roboto;
+    transition: 0.3s;
+}
+@keyframes animatedBackground {
+    0% {
+    background-position: 0% 0%;
+    }
+    15% {
+    background-position: 15% 15%;
+    }
+    30% {
+    background-position: 30% 30%;
+    }
+    45% {
+    background-position: 45% 45%;
+    }
+    60% {
+    background-position: 60% 60%;
+    }
+    75% {
+    background-position: 75% 75%;
+    }
+    90% {
+        background-position: 90% 90%;
+    }
+    100% {
+    background-position: 100% 100%;
+    }
+}
+
+.active-info-tab{
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0;
+}
+
+#greetings,#hello2{
+    font-size: 4vh;
+    font-weight: 500;
+    font-family: Roboto;
+}
+.start-task{
+    border: solid blueviolet;
+    border-radius: 5px;
+    height: 40px;
+    width: 200px;
+    margin-left: 1vw;
+    font-size: 1vw;
+    color: white;
+    background-color: blueviolet;
+    transition: .2s;
+}
+
+.start-task:hover{
+    border: solid blueviolet;
+    color: blueviolet;
+    background-color: white;
+}
+.start-task:active{
+    color: white;
+    background-color: blueviolet;
+}
+.tab-img{
+    display: none;
+    margin-top: 5vh;
+    width: 100%;
+}
+
+
+.timer-item-tab{
+    width: 100%;
+    overflow: hidden;
+    margin-left: auto;
+    margin-right: auto;
+    transition: 0.3s;
+}
+
+
+
+.card{
+    height: 15svh;
+    border-radius: 10px;
+    /* overflow: hidden; */
+    border: solid blueviolet;
+}
+.icon-holder{
+    background-color: blueviolet;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 100%;
+    font-size: 4svh;
+    color: white;
+}
+.data-text{
+    color: black;
+}

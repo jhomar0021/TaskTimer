@@ -1,0 +1,173 @@
+.projectlist{
+    width: 100%;
+    margin-top: 5svh;
+    overflow-y: scroll;
+    /* height: 100%; */
+    max-height: 80svh;
+}
+.project-btn{
+    border-radius: 10px;
+    width: 100%;
+    border: solid #ab51ff;
+    color:  #ab51ff;
+    background-color: white;
+}
+
+.accordion-button{
+    overflow: hidden;
+    background-color: white;
+}
+
+.accordion{
+
+    overflow: hidden;
+    border: solid blueviolet;
+    border-radius: 15px;
+    
+}
+
+.accordion-item{
+    border:none;
+    /* border: solid #ab51ff 2px; */
+    border-radius: 20px;
+    overflow: hidden;
+}
+.accordion-footer{
+    width: 150%;
+    height: 2svh;
+    background-color: #ab51ff;
+}
+.active-user-btn,.pending-user-btn {
+    background-color: #ab51ff;
+    color: white;
+    width: 100%;
+}
+
+.project-name{
+
+    background-color: #ab51ff;
+    background-image: url(https://mp-2-task-timer-ixtf.vercel.app/assets/img/bg-uneddited.png);
+    background-position: 0px 0px;
+    background-repeat: repeat-x;
+    animation: animatedBackground 50s linear infinite alternate;
+    width: 100%;
+    color: white;
+}
+
+@keyframes animatedBackground {
+    0% {
+    background-position: 0% 0%;
+    }
+    15% {
+    background-position: 15% 15%;
+    }
+    30% {
+    background-position: 30% 30%;
+    }
+    45% {
+    background-position: 45% 45%;
+    }
+    60% {
+    background-position: 60% 60%;
+    }
+    75% {
+    background-position: 75% 75%;
+    }
+    90% {
+        background-position: 90% 90%;
+    }
+    100% {
+    background-position: 100% 100%;
+    }
+}
+
+
+
+.stats-box{
+    border: solid #ab51ff 2px;
+    border-radius: 10px;
+}
+
+.data-inputs{
+    border: 2px solid #ab51ff;
+    background-color: transparent;
+    border-radius: 5px;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.button-label{
+    width: 100%;
+    height: auto;
+    margin: auto;
+}
+.add-task{
+    padding: 5px;
+    border: #ab51ff solid;
+    color: #ab51ff;
+    border-radius: 10px;
+    transition: .5s;
+}
+.accor-pop-btn{
+    max-height: 100px;
+    border: #ab51ff solid;
+    border-radius: 10px;
+}
+
+.modalclose:hover{
+    color: #ab51ff;
+    border: #ab51ff solid;
+    background-color: white;
+    border-radius: 50px;
+}
+
+.save-btn{
+    border: #ab51ff solid;
+    color: #ab51ff;
+    transition: .2s;
+    border-radius: 5px;
+}
+.save-btn:hover,.modalclose,.accor-pop-btn:hover,.add-task:hover,.project-btn:hover{
+    color: white;
+    background-color: #ab51ff;
+    transition: .2s;
+    border: solid #ab51ff;
+}
+.active-user-card{
+    border-radius: 5px;
+    border: #ab51ff solid;
+    max-height: 100px ;
+}
+.user-card-data{
+    margin: auto;
+    overflow: hidden;
+}
+.input-timer-name{
+    border: solid #ab51ff 2px;
+}
+
+.modal-header{
+    background-color: #ab51ff;
+    color: white;
+}
+
+table.dataTable thead th, table.dataTable thead td {
+    padding: 10px;
+    border-bottom: solid blueviolet;
+}
+
+table.dataTable tbody th, table.dataTable tbody td {
+    padding: 8px 10px;
+    border-bottom: solid blueviolet;
+    border-top: none;
+}
+.sorting_1,.dtr-control{
+    width: 5px;
+}
+
+div.dt-buttons .dt-button {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: none !important;
+}

@@ -1,0 +1,294 @@
+.home-menu-container {
+    border: solid blueviolet;
+    border-top: none;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    min-height: 85vh;
+    
+}
+
+.home-menu {
+    display: flex;
+    vertical-align: baseline;
+    justify-content: space-between;
+    margin: 0;
+    width: 100%;
+    position: sticky;
+    top:6vh;
+    background-color: white;
+    transition: 0.3s;
+}
+
+.hm-btn-on {
+    width: 55%;
+    height: 5vh;
+    border: blueviolet solid;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background-color: transparent;
+    border-bottom: none;
+    font-family: Roboto;
+    transition: 0.3s;
+    
+}
+.hm-btn-off {
+    width: 45%;
+    height: 5vh;
+    border: blueviolet solid;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background-image: url(https://mp-2-task-timer-ixtf.vercel.app/assets/img/bg-uneddited.png);
+    background-position: 0px 0px;
+    background-repeat: repeat-x;
+    animation: animatedBackground 20s linear infinite reverse;
+    color: white;
+    font-family: Roboto;
+    transition: 0.3s;
+}
+@keyframes animatedBackground {
+    0% {
+    background-position: 0% 0%;
+    }
+    15% {
+    background-position: 15% 15%;
+    }
+    30% {
+    background-position: 30% 30%;
+    }
+    45% {
+    background-position: 45% 45%;
+    }
+    60% {
+    background-position: 60% 60%;
+    }
+    75% {
+    background-position: 75% 75%;
+    }
+    90% {
+        background-position: 90% 90%;
+    }
+    100% {
+    background-position: 100% 100%;
+    }
+}
+
+.active-info-tab{
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0;
+}
+
+#greetings,#hello2{
+    font-size: 4vh;
+    font-weight: 500;
+    font-family: Roboto;
+}
+.start-task{
+    border: solid blueviolet;
+    border-radius: 5px;
+    height: 40px;
+    width: 120px;
+    margin-left: 1vw;
+    font-size: 1vw;
+    color: white;
+    background-color: blueviolet;
+    transition: .2s;
+}
+
+.notif-button{
+    height: 40px;
+    border: solid blueviolet;
+    background-color: blueviolet;
+    border-radius: 5px;
+    color: blueviolet;
+    transition: .2s;
+}
+.start-task:hover{
+    border: solid blueviolet;
+    color: blueviolet;
+    background-color: white;
+}
+.start-task:active{
+    color: white;
+    background-color: blueviolet;
+}
+.tab-img{
+    display: none;
+    margin-top: 5vh;
+    width: 100%;
+}
+.data-show{
+    border: none;
+    border: solid rgb(209, 175, 240);
+    border-radius: 10px;
+}
+.data-show-label{
+    color: blueviolet;
+}
+.data-show-value{
+    border: none;
+}
+
+.data-show-text{
+    
+    font-size: clamp(2vh, 1.5vw, 1.5vw);
+    font-family: Roboto;
+    overflow: hidden;
+}
+
+.cons-top{
+    border: solid rgb(159, 95, 223);
+    background-image: url(https://mp-2-task-timer-ixtf.vercel.app/assets/img/bg-uneddited.png);
+    background-position: 0px 0px;
+    background-repeat: repeat-x;
+    animation: animatedBackground 20s linear infinite alternate;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    height: 2vh;
+    margin-top: 2vh;
+}
+.cons-bot{
+    border: solid rgb(159, 95, 223);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background-image: url(https://mp-2-task-timer-ixtf.vercel.app/assets/img/bg-uneddited.png);
+    background-position: 0px 0px;
+    background-repeat: repeat-x;
+    animation: animatedBackground 20s linear infinite alternate;
+    height: 2vh;
+}
+
+
+.timer-item-tab{
+    width: 100%;
+    overflow: hidden;
+    margin-left: auto;
+    margin-right: auto;
+    transition: 0.3s;
+}
+.task-add{
+    border: solid black;
+    border-radius: 20px;
+    color: black;
+    overflow: hidden;
+}
+.add-taskbutton{
+    overflow: hidden;
+    margin-bottom: 5vh;
+}
+.add-item-label{
+    font-family: Roboto;
+    color: white;
+    background-color: blueviolet;
+    background-image: url(https://mp-2-task-timer-ixtf.vercel.app/assets/img/bg-uneddited.png);
+    background-position: 0px 0px;
+    background-repeat: repeat-x;
+    animation: animatedBackground 20s linear infinite alternate;
+    width: 100%;
+    border-bottom: solid black;
+
+}
+.add-task{
+    font-family: Roboto;
+    width: 85%;
+    border: solid black;
+    border-radius: 15px;
+    transition: .2s;
+}
+.add-task:hover{
+    color: blueviolet;
+    width: 90%;
+    border: solid black;
+}
+.add-task:active{
+    color: black;
+    background-color: blueviolet;
+}
+
+.button-label{
+    display: inline;
+}
+.timer-a-container {
+    margin-top: 3vh;
+    width: 100%;
+    border: solid black;
+    border-radius: 20px;
+    background-color: white;
+    overflow: hidden;
+    text-decoration: none;
+}
+
+.timer-top {
+    color: black;
+    width: 103%;
+    display: flex;
+    justify-content: space-between;
+    height: 5vh;
+    min-height: 35px;
+    background-color: blueviolet;
+    background-image: url(https://mp-2-task-timer-ixtf.vercel.app/assets/img/bg-uneddited.png);
+    background-position: 0px 0px;
+    background-repeat: repeat-x;
+    animation: animatedBackground 50s linear infinite alternate;
+    border-bottom: solid black;
+}
+
+.timer-details{
+    font-family: Roboto;
+    color: black;
+    display: block;
+    word-wrap: none;
+    height: 100%;
+    margin-top: 3vh;
+    margin-bottom: 3vh;
+}
+.timer-details-item{
+    border: black;
+    min-height: 20vh;
+}
+.timer-remove{
+    font-family: Roboto;
+    color: white;
+    margin-right: 3%;
+    border: solid white;
+    border-radius: 5px;
+    background-color: transparent;
+    transition: .5s;
+}
+.timer-remove:hover {
+    color: blueviolet;
+    margin-right: 3%;
+    border: solid blueviolet;
+    background-color: #fff;
+    border-radius: 50px;
+
+}
+
+.addtimermodal{
+    background-color: blueviolet;
+    background-image: url(https://mp-2-task-timer-ixtf.vercel.app/assets/img/bg-uneddited.png);
+    background-position: 0px 0px;
+    background-repeat: repeat-x;
+    animation: animatedBackground 20s linear infinite alternate;
+    border: solid black;
+    border-radius: 20px;
+    overflow: hidden;
+    color: white;
+}
+.modalclose {
+    border: none;
+    background-color: blueviolet;
+    color: #fff;
+    border-radius: 30px;
+}
+.modalclose:hover{
+    color: blueviolet;
+    background-color: #fff;
+}
+.atmodalbody {
+    background-color: #fff;
+}
+.projectlabel{
+    color: white;
+}

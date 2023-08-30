@@ -1,0 +1,88 @@
+body{
+    padding:0;
+    margin: 0;
+}
+.page-body{
+    width: 100vw;
+    height: 100vh;
+    background-image: url(../../assets/img/bg-uneddited.png);
+}
+
+body::-webkit-scrollbar{
+    display: none;
+  }
+
+.pipButton{
+    border: solid white;
+    border-radius: 5px;
+    width: 4vw;
+    height: 4vw;
+    background-color: transparent;
+    overflow: hidden;
+    color: white;
+}
+.pipButton-icon:hover{
+    width: 2.8vw;
+}
+.pipButton:hover{
+    background-color: transparent;
+    color: aqua;
+    border: solid aqua;
+}
+.pipButton-icon{
+    width: 2.5vw;
+    margin: auto;
+
+}
+
+.master-timer{
+    font-family: Roboto,Verdana ;
+    color: white;
+    border: solid white;
+    border-radius: 10px;
+    height: 41vw;
+    min-height: 10gvh;
+    width: 100%;
+    overflow: hidden;
+
+}
+
+.timer-display{
+    font-size: max(13vw, 9vh);
+    
+    
+}
+.metrics-box{
+    font-family: Roboto,Verdana ;
+    border: solid white;
+    border-radius: 10px;
+    overflow: hidden;
+    color: white;
+    margin-bottom: 0.5vw;
+}
+.mb-text{
+    font-size: max(3vw, 3.5vh);
+    
+}
+.display{
+    font-size: max(4vw, 7vh);
+}
+.button{
+    font-family: Roboto,Verdana ;
+    font-size: max(2.5vw,2vh);
+    width: 90%;
+    height: 8vw;
+    min-height: 10vh;
+    border: solid white;
+    color: white;
+    background-color: transparent;
+    border-radius: 10px;
+}
+
+.buttons button:hover {
+    background-color: transparent;
+    color: aqua;
+    border: solid aqua;
+}
+
+
